@@ -20,6 +20,10 @@ const jumbo_snapshotProductSchema  = new mongoose.Schema(
             required: true,
             type: String,
         },
+        points: {
+            required: true,
+            type: [String],
+        },
     },
     {
         timestamps: true,

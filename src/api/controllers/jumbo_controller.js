@@ -81,7 +81,8 @@ async function getJumboProductByID(productId, ean) {
         .getProductInfo(productId, ean)
         .then((result) => {
             const document = parse(result);
-
+            
+            // Edit vanaf hier
             // Get elements from body by attribute
             const productSummary = document.querySelector('[data-testhook="product-summary"]');
             const productItems = productSummary.querySelectorAll("li");
@@ -94,9 +95,9 @@ async function getJumboProductByID(productId, ean) {
             const productSummary_value = productSummary.innerHTML;
 
             return {
-                description: productDescription_value,
+                shortDescription1: productDescription_value,
+                shortDescription2: productSummary_value,
                 points: productItems_array,
-                optionalDescription: productSummary_value,
                 createAt: new Date()
             };
         });
@@ -133,3 +134,6 @@ function objectToExpectedProduct(obj) {
         optionalDescription: obj.optionalDescription,
     }
 }
+
+
+// npm install 'path to package.json van jumbo_scraper'
