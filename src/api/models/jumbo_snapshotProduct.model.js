@@ -3,8 +3,8 @@ const httpStatus = require("http-status");
 const APIError = require("../errors/api-error");
 const { env } = require("../../config/vars");
 
-// jumbo const { AHShopClient } = require("typescriptah");
-//jumbo const ahShop = new AHShopClient();
+// jumbo const { JumboShopClient } = require("typescriptjumbo");
+//jumbo const jumboShop = new JumboShopClient();
 
 const jumbo_snapshotProductSchema  = new mongoose.Schema(
     {
@@ -12,15 +12,11 @@ const jumbo_snapshotProductSchema  = new mongoose.Schema(
             required: true,
             type: Number,
         },
-        description: {
+        shortDescription1: {
             required: true,
             type: String,
         },
-        points: {
-            required: true,
-            type: [String],
-        },
-        optionalDescription: {
+        shortDescription2: {
             required: true,
             type: String,
         },

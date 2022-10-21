@@ -17,27 +17,19 @@ const jumbo_expectedProductSchema  = new mongoose.Schema(
             required: true,
             type: Number,
         },
-        productDescription: {
+        brand: {
             required: true,
             type: String,
         },
-        unitSize: {
+        title: {
             required: true,
             type: String,
         },
-        opco: {
+        shortDescription1: {
             required: true,
             type: String,
         },
-        description: {
-            required: true,
-            type: String,
-        },
-        points: {
-            required: true,
-            type: [String],
-        },
-        optionalDescription: {
+        shortDescription2: {
             required: true,
             type: String,
         },
